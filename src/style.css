@@ -1,6 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#main {
+    background: #ffcc00;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+header h1 {
+    color: #333;
+    font-size: 22px;
+}
+
+.questions-container {
+    margin-top: 20px;
+}
+
+#question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+#answers-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer-option {
+    display: flex;
+    align-items: center;
+    background: #ffeb99;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.answer-option:hover {
+    background: #ffd633;
+}
+
+.answer-option input {
+    appearance: none; /* Ховає стандартний вигляд */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff9900;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.answer-option input:checked {
+    background-color: #ff9900;
+}
+
+.answer-option input:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    background: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e68a00;
+}
+
 .hidden {
     display: none;
-}
-.show {
-    display: block;
 }

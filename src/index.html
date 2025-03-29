@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick knowledge test</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="main" class="show">
+        <header>
+            <h1>Test of JavaScript knowledge!</h1>
+        </header>
+        <div class="questions-container">
+            <p id="question">Loading question...</p>
+            <div id="answers-container">
+                <label class="answer-option"><input type="radio" name="answer"> Answer 1</label>
+                <label class="answer-option"><input type="radio" name="answer"> Answer 2</label>
+                <label class="answer-option"><input type="radio" name="answer"> Answer 3</label>
+                <label class="answer-option"><input type="radio" name="answer"> Answer 4</label>
+            </div>
+            <button id="submit-button" class="show" type="button">Next</button>
+            <button id="finish-button" class="hidden" type="button">Finish</button>
+        </div>
+        <div id="result-container" class="hidden">
+            <h2>Your result:</h2>
+            <p class="result-value">Result</p>
+            <button id="restart-button" class="hidden">Restart</button>
+        </div>
+    </div>
+</body>
+</html>

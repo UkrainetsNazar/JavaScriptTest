@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-#main {
+#main-container {
     background: #ffcc00;
     padding: 20px;
     border-radius: 10px;

@@ -8,6 +8,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="toast-container"></div>
     <div id="main-container">
         <header>
             <h1>Test of JavaScript knowledge!</h1>
@@ -22,11 +23,14 @@
             </div>
             <button id="submit-button" type="button">Next</button>
             <button id="finish-button" class="hidden" type="button">Finish</button>
+            <div class="progress-bar">
+                <div class="progress" id="progress-bar"></div>
+            </div>
         </div>
         <div id="result-container" class="hidden">
             <h2>Your result:</h2>
             <p class="result-value">Result</p>
-            <button id="restart-button">Restart</button>
+            <button id="restart-button" type="button">Restart</button>
         </div>
     </div>
 </body>

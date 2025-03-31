@@ -14,6 +14,8 @@ async function loadQuestions(){
     try{
         const response = await fetch('questions.json');
         questions = await response.json();
+
+        shuffleArray(questions);
         showQuestion();
     }
     catch(e){
@@ -21,12 +23,24 @@ async function loadQuestions(){
     }
 }
 
+//Algorithm Fisher-Yates
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 function showQuestion() {
     const getQuestion = questions[currentQuestionIndex];
-    question.textContent = getQuestion.question;
+    question.textContent = `${currentQuestionIndex+1}. ${getQuestion.question}`;
 
     answersContainer.innerHTML = "";
-    getQuestion.options.forEach(option => {
+
+    let shuffledOptions = [...getQuestion.options];
+    shuffleArray(shuffledOptions);
+
+    shuffledOptions.forEach(option => {
         const label = document.createElement("label");
         label.classList.add("answer-option");
 
@@ -80,6 +94,7 @@ function restartTest(){
     submitBtn.classList.remove("hidden");
     finishBtn.classList.add("hidden");
 
+    shuffleArray(questions);
     showQuestion();
 }
 
